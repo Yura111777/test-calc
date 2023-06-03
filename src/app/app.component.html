@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row content">
-    <div class="col-xl-6 p-0">
+    <div class="col p-0">
       <ul ngbNav #nav="ngbNav" class="nav-tabs">
         <li ngbNavItem *ngFor="let element of [].constructor(4); index as i">
           <button ngbNavLink class="fs-14 p-0">Lorem{{ i + 1 }}</button>
@@ -147,7 +147,7 @@
       </ul>
       <div [ngbNavOutlet]="nav"></div>
     </div>
-    <div class="col p-0">
+    <div class="col-auto p-0">
       <div class="result">
         <span class="sub fw-normal">Profit</span>
         <h1 class="fs-55 mb-h1 fw-bold">${{ calculatedValue }}</h1>
