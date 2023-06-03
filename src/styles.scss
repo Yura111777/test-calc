@@ -1,1 +1,414 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "fonts";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import 'bootstrap/scss/bootstrap';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #252F2C;
+  padding-top: 27px;
+  *:focus{
+    outline: none;
+  }
+}
+.container{
+  max-width: 1280px;
+}
+.fs-12{
+  font-size: .75rem;
+}
+.fs-14{
+  font-size: .875rem;
+}
+.fs-17{
+  font-size: 1.0625rem;
+}
+.fs-18{
+  font-size: 1.125rem;
+}
+.fs-20{
+  font-size: 1.25rem;
+}
+.fs-22{
+  font-size: 1.375rem;
+}
+.fs-23{
+  font-size: 1.4375rem;
+}
+.fs-24{
+  font-size: 1.5rem;
+}
+.fs-55{
+  font-size: 3.4375rem;
+  line-height: 4rem;
+}
+.content{
+  box-shadow: 0 0 40px rgba(86, 198, 173, 0.13);
+  border-radius: 10px;
+}
+.nav-tabs{
+  padding: 40px 93px 0 45px;
+  background-color: #fff;
+  margin-bottom: 2px;
+  border: 0;
+
+  .nav-link{
+    margin: 0 31px 0 0;
+    color: #252F2C;
+    border: 0;
+    &:hover,&:focus{
+      border: 0;
+    }
+    &.active{
+      position: relative;
+      border: 0;
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 100%;
+        background: #56C6AD;
+        box-shadow: 0 1px 2px rgba(86, 198, 173, 0.25);
+      }
+    }
+  }
+}
+.form-calculation{
+  padding: 40px 93px 42px 45px;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+div.form-input{
+  color: #4A5653;
+  height: 50px;
+  background-color: #F4F5F6;
+  input{
+    color: #4A5653;
+    height: 50px;
+    padding-left: 22px;
+    border: 0;
+    background-color: transparent;
+    margin-right: 27px;
+    width: 113px;
+      }
+}
+.ng-select.ng-select-single, .ng-select {
+  .ng-clear-wrapper{
+    display: none;
+  }
+  .ng-arrow-wrapper {
+    padding-right: 0;
+    margin-right: 22px;
+    .ng-arrow {
+      display: none;
+    }
+  }
+  span.ng-arrow-wrapper:before {
+    content: "\e904";
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: .45rem;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #4A5056;
+  }
+  .ng-dropdown-panel{
+    padding: 26px 33px 26px 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 0;
+    &-items{
+      /* width */
+      &::-webkit-scrollbar {
+        width: 9px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #DEF1ED;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: url("assets/img/track.png") #56C6AD center center no-repeat;
+        box-shadow: 0 4px 4px rgba(86, 198, 173, 0.3);
+        border-radius: 50px;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #88dd88;
+      }
+    }
+    .ng-option.ng-option-selected{
+      background-color: transparent;
+      .opt-item{
+        font-weight: 700;
+        color: #252F2C;
+      }
+    }
+    .ng-option.ng-option-marked {
+      background-color: transparent;
+      .opt-item{
+        background: #F6F7FB;
+        font-weight: 700;
+        color: #252F2C;
+      }
+    }
+    .ng-option{
+      padding: 0;
+      .opt-item{
+        border-radius: 6px;
+        font-weight: 400;
+        color: #252F2C;
+        height: 40px;
+        padding-left: 16px;
+      }
+    }
+    .ng-dropdown-header{
+      padding: 0;
+      border-bottom: 1px solid #E6E9ED;
+      margin-bottom: 27px;
+    }
+  }
+  .has-feedback{
+    .icon-search{
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      color: #AEB7B5;
+      font-size: .875rem;
+      transform: translate(0,-50%);
+      line-height: 14px;
+    }
+    .form-control{
+      height: 40px;
+      background: #FFFFFF;
+      border: 1px solid #E6E9ED;
+      border-radius: 6px;
+      padding-left: 40px;
+      outline: none;
+      &:focus{
+        box-shadow: none;
+      }
+      &::placeholder{
+        color: #AEB7B5;
+      }
+    }
+  }
+  .ng-select-container{
+    background-color: #F4F5F6;
+    border-radius: 0;
+    .ng-value-container{
+      height: 50px;
+      padding-left: 22px;
+      background-color: #F4F5F6;
+      .ng-value{
+        color: #4A5653;
+      }
+      .ng-input{
+        top: 0;
+        input{
+          height: 50px;
+        }
+      }
+    }
+    border: 0;
+    padding: 0;
+    height: auto;
+    .img-label{
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translate(-50%);
+    }
+  }
+}
+label{
+  margin-bottom: 12px;
+}
+.form-group{
+  margin-bottom: 28px;
+}
+.opt{
+  margin-top: -5px;
+  .btn{
+    padding: 0;
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+    border: 0;
+    font-size: 1.1875rem;
+    &:hover{
+      opacity: .5;
+    }
+    &.minus{
+      color: #C75D30;
+      margin-right: 5px;
+    }
+    &.plus{
+      color: #539985;
+    }
+  }
+}
+.drop-down-text{
+  color: #838C8A;
+  margin-bottom: 14px;
+  margin-top: 30px;
+  padding: 0 16px;
+}
+.result{
+  color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #56C6AD;
+  padding: 40px 50px 22px 50px;
+  width: 100%;
+  max-width: 595px;
+}
+.star-items{
+  .icon-star{
+    margin-right: 7px;
+    line-height: initial;
+  }
+}
+.mb-h1{
+  margin-bottom: 36px;
+}
+.sub{
+  margin-bottom: 6px;
+  display: block;
+
+}
+.under{
+  margin-bottom: 49px;
+  display: block;
+  margin-top: -6px;
+}
+.custom-button{
+  color: #fff;
+  border: 2px solid #FFFFFF;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  text-transform: uppercase;
+  padding: 0 54px;
+}
+.lorem-text{
+  margin-top: 33px;
+  margin-bottom: 0;
+}
+span.in-valid{
+  color: red;
+}
+div.in-valid{
+  border: 1px solid red;
+}
+.apr{
+  color: #FFFFFF;
+  text-transform: uppercase;
+  height: 20px;
+  padding: 0 5px;
+  background: #77D8C2;
+  border-radius: 4px;
+  margin-left: 28px;
+}
+.check-info{
+  margin-top: 48px;
+}
+.text{
+  color: #4A5653;
+  font-weight: 400;
+}
+.icon-tooltip{
+  line-height: 10px;
+  &.disable{
+    margin-left: 10px;
+    color: #CFCFCF;
+  }
+  &.active{
+    color: #56C6AD;
+    cursor: pointer;
+  }
+}
+.check{
+  margin-left: 36px;
+  margin-right: 16px;
+  input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+  }
+  &-outer{
+    width: 62px;
+    padding: 0 4px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    background: #ccc;
+    border-radius: 50px;
+    transition: .5s all ease-in-out;
+    position: relative;
+  }
+  input:checked + &-outer{
+    transition: .5s all ease-in-out;
+    background: #E0F3EF;
+  }
+  input:checked + &-outer  .check-track{
+    transition: .5s all ease-in-out;
+    background: #56C6AD;
+    box-shadow: 0 2px 4px rgba(86, 198, 173, 0.4);
+    left: calc(100%  - 28px);
+
+  }
+  &-track{
+    transition: .5s all ease-in-out;
+    height: 24px;
+    width: 24px;
+    background: #aaaaaa;
+    border-radius: 100%;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+ngb-tooltip-window.bs-tooltip-top {
+  .tooltip-inner{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: .75rem;
+    max-width: 350px;
+    background-color: #323b38;
+  }
+  .tooltip-arrow::before{
+    border-top-color: #323b38;
+  }
+}
+.custom-style{
+  display: block;
+  padding: 10px 0;
+  margin-left: 13px;
+}
